@@ -11,11 +11,16 @@ import Navbar from '@/components/ui/navbar';
 import { Github, FileText, Zap, CheckCircle } from 'lucide-react';
 
 const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://127.0.0.1:5000';
-
+interface PaperData {
+  title?: string;
+  abstract?: string;
+  conclusion?: string;
+  references?: string;
+}
 export default function Home() {
   const [githubUrl, setGithubUrl] = useState('');
   const [documentation, setDocumentation] = useState('');
-  const [paperData] = useState<any>(null);
+  const [paperData] = useState<PaperData | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
