@@ -15,7 +15,7 @@ const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://127.0.0.1:500
 export default function Home() {
   const [githubUrl, setGithubUrl] = useState('');
   const [documentation, setDocumentation] = useState('');
-  const [paperData, setPaperData] = useState<any>(null);
+  const [paperData] = useState<any>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
