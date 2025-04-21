@@ -1,0 +1,46 @@
+\documentclass[conference]{IEEEtran}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{cite}
+\usepackage{url}
+
+\title{{{{ title }}}}
+\author{{{{ author }}}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+{{ abstract }}
+\end{abstract}
+
+\begin{IEEEkeywords}
+{{ keywords }}
+\end{IEEEkeywords}
+
+\section{Introduction}
+{{ introduction }}
+
+\section{Related Work}
+{{ related_work }}
+
+\section{Methodology}
+{{ methodology }}
+
+\section{Results and Discussion}
+{{ results }}
+
+\section{Conclusion}
+{{ conclusion }}
+
+\section*{Acknowledgment}
+{{ acknowledgment }}
+
+\bibliographystyle{IEEEtran}
+\begin{thebibliography}{1}
+{{ references }}
+\end{thebibliography}
+
+\end{document}
