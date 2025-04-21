@@ -57,8 +57,16 @@ export default function Home() {
       // saveAs(blob, 'ieee_paper.docx'); // :contentReference[oaicite:17]{index=17}
 
     }catch (err: unknown) {
-  setError(error instanceof Error ? error.message : 'Something went wrong');
-
+  let errorMessage = 'Something went wrong';
+  if (err instanceof Error) {
+    errorMessage = err.message;
+  } else if (typeof err === 'string') {
+    errorMessage = err;
+  }
+  setError(errorMessage);
+} finally {
+  setLoading(false);
+}
     } finally {
       setLoading(false);
     }
