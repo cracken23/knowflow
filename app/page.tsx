@@ -56,8 +56,9 @@ export default function Home() {
       // Or, using FileSaver.js:
       // saveAs(blob, 'ieee_paper.docx'); // :contentReference[oaicite:17]{index=17}
 
-    } catch (err: any) {
-      setError(err.message || 'Something went wrong');
+    }catch (err: unknown) {
+  setError(error instanceof Error ? error.message : 'Something went wrong');
+
     } finally {
       setLoading(false);
     }
